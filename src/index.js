@@ -43,3 +43,60 @@ console.log('Proje açıldı!')
 
 
 /* Kodlar Buradan aşağıya */
+
+const firstHeading = document.querySelector('h1');
+firstHeading.textContent = "Bu DOM Mükemmel";
+
+const anchors = document.querySelectorAll(".container a");
+anchors[0].textContent = "Servisler";
+anchors[1].textContent = "Ürünler";
+anchors[2].textContent = "Vizyon";
+anchors[3].textContent = "Özellikler";
+anchors[4].textContent = "Hakkımızda";
+anchors[5].textContent = "İletişim";
+
+for (let i = 0; i < anchors.length; i++){
+anchors[i].className = "italic";
+}
+
+const sirketLogo = document.querySelector(".logo");
+sirketLogo.src = "http://localhost:9000/img/logo.png";
+
+const ctaButton = document.querySelector(".cta button");
+ctaButton.textContent = "Başlayın";
+
+const ctaImage = document.querySelector('#cta-img');
+ctaImage.src = "http://localhost:9000/img/cta.png";
+
+const fourthHeader = document.querySelectorAll(".text-content h4");
+let counter = 0;
+for (let i = 0; i < fourthHeader.length; i++) {
+  fourthHeader[i].textContent = Object.values(siteContent["ana-içerik"])[counter];
+  counter += 2;
+}
+counter = 0;
+counter = 1;
+const mainP = document.querySelectorAll('.main-content p');
+
+for (let i = 0; i < mainP.length; i++) {
+  mainP[i].textContent = Object.values(siteContent["ana-içerik"])[counter];
+  counter += 2;
+}
+
+counter = 0;
+
+const middleImage = document.querySelector(".middle-img");
+middleImage.src = "http://localhost:9000/img/accent.png";
+
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = 'İletişim';
+
+const contactP = document.querySelectorAll('.contact p');
+contactP[0].textContent = `100 numara Bilmem ne sokak Ankara'da bir semt, Türkiye`;
+contactP[1].textContent = `+90 (123) 456-7899`;
+contactP[2].textContent = `satis@birsirketsitesi.com.tr`;
+
+const footerAnchor = document.querySelector('footer a');
+footerAnchor.textContent = `Copyright Bir Şirket Sitesi 2022`;
+footerAnchor.className = 'bold';
+
